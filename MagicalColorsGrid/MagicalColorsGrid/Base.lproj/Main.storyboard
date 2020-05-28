@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zju-df-Ib4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zju-df-Ib4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Txe-aY-rKF">
                                     <size key="itemSize" width="50" height="50"/>
@@ -46,7 +46,7 @@
                             <constraint firstAttribute="trailing" secondItem="Zju-df-Ib4" secondAttribute="trailing" id="1oS-PG-XOu"/>
                             <constraint firstAttribute="bottom" secondItem="Zju-df-Ib4" secondAttribute="bottom" id="2KW-6A-cS2"/>
                             <constraint firstItem="Zju-df-Ib4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JEP-Lg-MO1"/>
-                            <constraint firstItem="Zju-df-Ib4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x3i-OJ-Det"/>
+                            <constraint firstItem="Zju-df-Ib4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="x3i-OJ-Det"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

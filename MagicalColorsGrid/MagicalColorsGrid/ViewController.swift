@@ -11,22 +11,46 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var screenWidth: CGFloat = 0
+    var screenHeight: CGFloat = 0
+    var pixelsWidth: CGFloat = 0
+    let pixelsPerRow: CGFloat = 30
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.collectionViewLayout = CustomFlowLayout()
+        screenWidth = UIScreen.main.bounds.width
+        screenHeight = UIScreen.main.bounds.height
+        pixelsWidth = screenWidth / pixelsPerRow
+
+        let customLayout = CustomFlowLayout()
+        customLayout.delegate = self
+        collectionView.collectionViewLayout = customLayout
     }
 }
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        900
+        let pixelsPerColumn: CGFloat = screenHeight + 1 / pixelsWidth
+        return Int(pixelsPerRow * pixelsPerColumn)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .green
+        let redRandom =  CGFloat(drand48())
+        let greenRandom = CGFloat(drand48())
+        let blueRandom = CGFloat(drand48())
+        cell.backgroundColor = UIColor(red: redRandom, green: greenRandom, blue: blueRandom, alpha: 1)
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor.black.cgColor
+
         return cell
+    }
+}
+
+extension ViewController: CustomFlowLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, getSizeAtIndexPath: IndexPath) -> CGSize {
+        let width = screenWidth/pixelsPerRow
+        return CGSize(width: width, height: width)
     }
 }

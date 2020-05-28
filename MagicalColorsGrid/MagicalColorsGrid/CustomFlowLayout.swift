@@ -37,17 +37,16 @@ class CustomFlowLayout: UICollectionViewLayout {
         cache.removeAll()
 
         var xOrigin: CGFloat = 0
-        var yOrigin: CGFloat = 0
+        var yOrigin: CGFloat = -UIApplication.shared.statusBarFrame.height
 
-        let defaultSize: CGFloat = collectionView.bounds.width/20
         let sectionIndex = 0
 
         for itemIndex in 0..<collectionView.numberOfItems(inSection: sectionIndex) {
             let indexPath = IndexPath(row: itemIndex, section: sectionIndex)
             let itemSize = delegate?.collectionView(collectionView, getSizeAtIndexPath: indexPath) ??
-                CGSize(width: defaultSize, height: defaultSize)
+                CGSize(width: 20, height: 20)
 
-            if xOrigin + itemSize.width > contentWidth {
+            if floor(xOrigin + itemSize.width) > contentWidth {
                 xOrigin = 0
                 yOrigin += itemSize.height
             }
@@ -61,11 +60,6 @@ class CustomFlowLayout: UICollectionViewLayout {
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.frame = frame
 
-            if indexPath.row % 2 != 0 {
-                attributes.alpha = 0.5
-                attributes.frame.size.height = 25
-                attributes.frame.size.width = 25
-            }
             cache.append(attributes)
             contentHeight = max(contentHeight, yOrigin + itemSize.height)
         }
