@@ -37,7 +37,7 @@ class CustomFlowLayout: UICollectionViewLayout {
         cache.removeAll()
 
         var xOrigin: CGFloat = 0
-        var yOrigin: CGFloat = -UIApplication.shared.statusBarFrame.height
+        var yOrigin: CGFloat = 0
 
         let sectionIndex = 0
 
