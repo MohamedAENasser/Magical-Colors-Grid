@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D938DB612480A91500AFDB0D /* ViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D938DB602480A91500AFDB0D /* ViewController+CollectionView.swift */; };
 		D9FEE7AA247ED1160066951E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEE7A9247ED1160066951E /* AppDelegate.swift */; };
 		D9FEE7AC247ED1160066951E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEE7AB247ED1160066951E /* SceneDelegate.swift */; };
 		D9FEE7AE247ED1160066951E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEE7AD247ED1160066951E /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D938DB602480A91500AFDB0D /* ViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		D9FEE7A6247ED1160066951E /* MagicalColorsGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicalColorsGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FEE7A9247ED1160066951E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9FEE7AB247ED1160066951E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				D9FEE7A9247ED1160066951E /* AppDelegate.swift */,
 				D9FEE7AB247ED1160066951E /* SceneDelegate.swift */,
 				D9FEE7AD247ED1160066951E /* ViewController.swift */,
+				D938DB602480A91500AFDB0D /* ViewController+CollectionView.swift */,
 				D9FEE7BD247F12AB0066951E /* CustomFlowLayout.swift */,
 				D9FEE7AF247ED1160066951E /* Main.storyboard */,
 				D9FEE7B2247ED1170066951E /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				D9FEE7AA247ED1160066951E /* AppDelegate.swift in Sources */,
 				D9FEE7BE247F12AB0066951E /* CustomFlowLayout.swift in Sources */,
 				D9FEE7AC247ED1160066951E /* SceneDelegate.swift in Sources */,
+				D938DB612480A91500AFDB0D /* ViewController+CollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
