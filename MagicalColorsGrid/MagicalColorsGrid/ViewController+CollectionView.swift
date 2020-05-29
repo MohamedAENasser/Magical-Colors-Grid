@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: DataSource
-extension ViewController: UICollectionViewDataSource {
+extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Int(pixelsPerRow * pixelsPerColumn)
     }
@@ -28,7 +28,7 @@ extension ViewController: UICollectionViewDataSource {
 }
 
 // MARK: Delegate
-extension ViewController: UICollectionViewDelegate {
+extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) else { return }
         collectionView.bringSubviewToFront(cell)
@@ -42,7 +42,7 @@ extension ViewController: UICollectionViewDelegate {
 }
 
 // MARK: CustomFlowLayoutDelegate
-extension ViewController: CustomFlowLayoutDelegate {
+extension MainViewController: CustomFlowLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, getSizeAtIndexPath: IndexPath) -> CGSize {
         let width = screenWidth/pixelsPerRow
         return CGSize(width: width, height: width)
